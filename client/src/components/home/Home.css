@@ -37,7 +37,7 @@
     width: 92%;
     height: 60%;
     overflow-x: hidden;
-    overflow-y: hidden;
+    overflow-y: auto;
     
     /* border: solid black; */
   }
@@ -66,6 +66,7 @@
     height: 100vh;
     /* background-color: yellow; */
     overflow-y: auto ;
+    overflow-x: hidden;
     justify-content: center;
     padding: 10px;
 
