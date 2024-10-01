@@ -7,31 +7,33 @@ import { useEffect, useState } from "react";
 
 export function Home() {
   const [images, setImages] = useState([]);
+  const [imagesloaded,setImagesloading] = useState(0);
   useEffect(() => {
     // Fetch images from the back end
     fetch("https://course-management-system-wnlu.onrender.com/addSliderImages")
       .then((res) => res.json())
-      .then((data) => setImages(data))
+      .then((data) => setImages(data),setImagesloading(true))
       .catch((err) => console.log(err));
   }, []);
 
   return (
+
     <div className="dynamic-content">
       <div className="slideshow">
-        <div className="slides">
-          {images.map((image, idx) => (
-            <img
-              src={image.imageUrl}
-              key={idx}
-              alt={`Slide ${image.id}`}
-              style={{ width: "100%", borderRadius: "20px" }}
-            />
-          ))}
-          {/* <img src={slide1} style={{width:"100%"}}></img>
-        <img src={slide2} style={{width:"100%"}}></img>
-        <img src={slide3} style={{width:"100%"}}></img>
-        <img src={slide1} style={{width:"100%"}}></img> */}
-        </div>
+      {imagesloaded ?(<div className="slides">
+      {images.map((image, idx) => (
+        <img
+          src={image.imageUrl}
+          key={idx}
+          alt={`Slide ${image.id}`}
+          style={{ width: "100%", borderRadius: "20px" }}
+        />
+      ))}
+      {/* <img src={slide1} style={{width:"100%"}}></img>
+    <img src={slide2} style={{width:"100%"}}></img>
+    <img src={slide3} style={{width:"100%"}}></img>
+    <img src={slide1} style={{width:"100%"}}></img> */}
+    </div>) : (<>Loading...</>)}
       </div>
 
       <h1 className="sidebar-below-text">Featured</h1>
