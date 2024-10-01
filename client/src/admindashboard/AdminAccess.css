@@ -1,0 +1,241 @@
+
+.box{
+    display: flex;
+    /* align-items: center; */
+    align-items: start;
+    flex-direction: row;
+}
+.dashheader{
+    top:0;
+    width: 100%;
+    height: 70px;
+    background-color: rgba(15, 4, 4, 0.901);
+    position: sticky;
+}
+.dashsidebar{
+    left: 0;
+    width: 275px;
+    height: 100vh;
+    /* background-color: rgba(16, 148, 230, 0.275); */
+    background-color: rgb(182, 215, 236);
+    /* height: 100vh; */
+    position: fixed;
+    overflow:auto;
+
+}
+.dashcontent{
+    /* display: grid; */
+    /* flex-direction: row; */
+    /* justify-content: center; */
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    margin-left: 275px;
+    background-color: rgba(0, 0, 0, 0.102);
+    width: 100vw;
+    /* width: fit-content; */
+    overflow-y: scroll;
+    /* calc(100vw - 300px) */
+    /* height: 100vh; */
+}
+
+.imgbuttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 40px;
+    width: 100%;
+    /* background-color: #333; */
+    margin-bottom: 10px;
+}
+.removebtn{
+    font-size: medium;
+    color: white;
+    background: #333;
+    border-radius: 20px 0 0 20px ;
+    /* border-radius: 20px; */
+    width: 45%;
+    height: 100%;
+}
+.changebtn{
+    font-size: medium;
+    color: white;
+    background: #333;
+    border-radius: 0 20px 20px 0 ;
+    /* border-radius: 20px; */
+    width: 45%;
+    height: 100%;
+}
+.slidercontent{
+    margin-top: 25px;
+    width: 100%;
+    height: 30%;
+
+}
+
+.sliderbox{
+    /* flex-wrap: wrap; */
+    width: 100%;
+    background-color: white;
+    height: 300px;
+    border-radius: 50px;
+    height: fit-content;
+    overflow-x: scroll;
+    display: flex;
+    flex-direction: row;
+    align-items: center ;
+}
+.coursescontent{
+    margin-top: 30px;
+    overflow-y: scroll;
+    /* overflow: scroll; */
+    width: 100%;
+    height: 700px;
+}
+.coursesbox{
+    background-color: white;
+    display: flex;
+    /* gap: 1vw; */
+    flex-direction: column;
+    width: 100%;
+    /* height: 50vh; */
+    overflow-y: scroll;
+    /* justify-content: center; */
+    justify-content: flex-start; 
+    margin-bottom: 10px;
+    border: 2px solid grey;
+    border-radius: 20px;
+}
+.crsbtns{
+    padding: 15px;
+    margin-left: 5px ;
+    margin-bottom: 5px ;
+}
+.courselist{
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    border: 1px solid grey;
+    border-radius: 20px;
+    width: 100%;
+    /* gap: 1000px; */
+    height: 30%;
+}
+.editcoursepopup{
+    z-index: 100;
+    border-radius: 15px;
+    /* display: flex;
+    flex-direction: flex;
+    align-content: flex-end; */
+    position: fixed;
+    /* align-items:center ; */
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 1050px;
+    height: 750px;
+    background-color: #abf47e;
+    overflow: auto;
+    /* overflow: auto; Add this line */
+}
+.coursedetailselement1{
+    margin-top: 15px;
+    width: 100%;
+    height: 10%;
+}
+.coursedetailselement2{
+    margin-top: 15px;
+    width: 100%;
+    height: 30%;
+    margin-bottom: 10px;
+}
+.coursetext{
+    padding: 10px;
+    overflow: hidden;
+    width: 100%;
+}
+
+
+.slidercontent img{
+    width: 280px;
+    margin: 20px;
+    border-radius: 30px;
+}
+.coursescontent img{
+    width: 280px;
+    margin: 20px;
+    border-radius: 30px;
+}
+
+.courselist button{
+    padding: 10px;
+    width: 100px;
+    height: 60px;
+    margin-left: 10px;
+    background-color: rgb(46, 226, 46);
+    border-radius: 50px;
+    color: white;
+    font-size: medium;
+    border: aliceblue;
+}
+
+.Welcome{
+    padding: 15px;
+    color: white;
+}   
+.coursevideotitle{
+    padding: 10px;
+}
+
+.editablevideocontainer{
+    display: flex;
+    flex-direction: row;
+    width: 98%;
+    height: 150px;
+    /* background-color: #fff719; */
+    /* //lavender grey peach */
+    background-color: lavender;
+    /* background-color: rgb(238, 236, 236); */
+
+
+    border:1px solid black;
+
+}
+
+@media screen and (max-width:1200px){
+    .dashsidebar{
+        display: none;  
+    }
+    .dashcontent{
+        margin-left: 0px;
+    }
+
+}
+
+@media screen and (max-width:800px){
+    .editcoursepopup{
+        width: 98vw;
+        height: 98vh;
+    }
+}   
+
+
+@media screen and (max-width:600px) {
+    .courselist{
+        flex-direction: column;
+    }
+    .coursetext{
+        margin-top: 20px;
+        margin-left: 5px;
+    }
+}
+@media screen and (max-width:850px) {
+    .editablevideocontainer{
+        height: 100px;
+    }
+}
+@media screen and (max-width:670px) {
+    .editablevideocontainer{
+        height: 80px;
+    }
+}

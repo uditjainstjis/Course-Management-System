@@ -1,0 +1,120 @@
+
+.sidebar{
+    position: relative;
+    background-color: rgb(232, 221, 249);
+    min-width: 270px;
+    /* margin-right: 10px; */
+    min-height: 100vh;
+  }
+
+
+.sidebar{
+  display: block;
+}
+  
+  @media screen and (max-width:1175px){
+    .sidebar{
+      min-width: 240px;
+    }
+  }
+  
+  
+  @media screen and (max-width:1000px){
+    .sidebar{
+      display: none;
+    }
+    .sidebar.open{
+      z-index: 9;
+      display: block;
+      position: absolute;
+    }
+  }
+  
+  
+  .clickables{
+    margin-top: 90px;
+    margin-left: 30px;
+  }
+  
+  .opts{
+    font-weight: bold;
+    color:grey;
+  }
+  
+  
+  .courses{
+    margin-top: 30px;
+  }
+  .courses:hover{
+    cursor:pointer
+  }
+  .extra{
+    margin-top: 30px;
+  }
+  .extra:hover{
+    cursor:pointer
+  }
+  .faqs{
+    margin-top: 30px;
+  }
+  .faqs:hover{
+    cursor:pointer
+  }
+  .extra{
+    margin-top: 30px;
+  }
+  .extra:hover{
+    cursor:pointer
+  }
+  .blog{
+    margin-top: 30px;
+  }
+  .blog:hover{
+    cursor:pointer
+  }
+  .settings{
+    margin-top: 30px;
+  }
+  .settings:hover{
+    cursor:pointer
+  }
+  
+  .homeImage{
+    margin-top: 50px;
+    height: 16px;
+    margin-right: 12px;
+  }
+  .coursesImage{
+    height: 16px;
+    margin-right: 12px;
+  }
+  .extraImage{
+    height: 16px;
+    margin-right: 12px;
+  }
+  .faqsImage{
+    height: 16px;
+    margin-right: 12px;
+  }
+  .blogImage{
+    height: 16px;
+    margin-right: 12px;
+  }
+  .settingsImage{
+    height: 16px;
+    margin-right: 12px;
+  }
+  
+  .mainmenutext{
+    position: absolute;
+    left: 35px;
+    margin-bottom: 5px;
+    margin-top: 100px;
+    color: grey;
+    font-weight: 700!important;
+    font-size: 0.8em;
+  }
+  
+  
+  
+  

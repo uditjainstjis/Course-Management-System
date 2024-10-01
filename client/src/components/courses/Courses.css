@@ -1,0 +1,155 @@
+.courses-page {
+    margin-top: 8vh;
+    margin-left: 2vw;
+    /* margin-left: 2vw; */
+    display: flex;
+    gap: 4vw;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+    /* justify-content: center; */
+    justify-content: flex-start; 
+    /* flex-direction: row; */
+    /* position: relative; */
+}
+
+.singleCourse{
+    margin-top: 3vh;
+    width: 15vw;
+    flex-basis: calc(33.33% - 4vw);
+     /* This makes sure 3 divs fit in a row with a gap */
+
+    /* height: 50vh; */
+    height: fit-content;
+    border: 1px solid rgb(192, 190, 190);
+    border-radius: 19px;
+    /* overflow: scroll; */
+}
+.test{
+    width: 50%;
+    line-height:20px;
+    text-wrap: wrap;
+}
+.singleCourseImage{
+    width: 100%;
+    height: 45%;
+}
+
+.coursecontainer{
+    overflow-y: auto;
+    margin-top: 60px;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+
+    width:100%;
+    /* height: 100vh; */
+    /* background-color:rgb(248, 248, 248); */
+}
+
+.topblock{
+    /* background-color: rgb(48,122,224); */
+    display: flex;
+    /* align-items: center; */
+    background-color: rgb(74, 128, 238);
+    width: 100%;
+    height: 290px;
+}
+
+.topblocktitle{
+    transform:translate(0%,-50%);
+    margin-top:14%;
+    margin-left: 15px;
+    font-size: 2.5em;
+    color: white
+}
+@media screen and (max-width:1000px){
+    .topblocktitle{
+        margin-top: 20%;
+        font-size: 2.3em;
+    }
+}
+@media screen and (max-width:650px){
+    .topblocktitle{
+        margin-top: 25%;
+        font-size: 2em;
+    }
+}
+.coursecontent{
+    display: flex;
+    flex-direction: row;
+    overflow-y: auto;
+}
+.coursetext{
+    /* background-color: white; */
+    width: 600px;
+    height: 100%;
+    margin-left: 5vw;
+}
+.coursetextt{
+    /* background-color: white; */
+    width: 600px;
+    height: 100%;
+    margin-left: 5vw;
+}
+.coursecard{
+    margin-left: 10px;
+    flex: 0 0 400px;
+    position: relative;
+    top:50px;
+    width: 600px;
+    height: 430px;
+    margin-right: 5%;
+    /* background-color: white; */
+}
+
+.desyy{
+    font-size: 1.1em;
+}
+
+@media screen and (max-width: 1000px) {
+    .topblock{
+        flex-wrap: wrap;
+    }
+    .topblocktitle{
+        flex: 0 0 100%;
+    }
+    .coursetextt{
+        margin-top: 500px;
+    }
+    .coursecontent{
+    overflow-y:unset;
+    }
+    .coursecard{
+        margin-top: 10px;
+    }
+
+}
+
+@media screen and (max-width: 1000px) {
+    .singleCourse {
+        flex-basis: calc(50% - 6vw); 
+    }
+} 
+
+@media screen and (max-width: 900px) {
+    .singleCourse {
+        flex-basis: calc(50% - 6vw); 
+    }
+} 
+
+@media screen and (max-width: 600px) {
+    .singleCourse {
+        flex-basis: calc(100% - 3vw); 
+    }
+}
+@media screen and (max-width: 500px) {
+    .desyy{
+        font-size: 0.9em;
+    }
+    .desxx{
+        display: none;
+    }
+}
+/* 3 line sidebar photo */
+/* background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 3…miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") */
