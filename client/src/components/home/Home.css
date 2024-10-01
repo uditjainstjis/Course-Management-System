@@ -37,7 +37,7 @@
     width: 92%;
     height: 60%;
     overflow-x: hidden;
-    overflow-y: auto;
+    overflow-y: hidden;
     
     /* border: solid black; */
   }
