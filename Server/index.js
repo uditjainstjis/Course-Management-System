@@ -9,8 +9,6 @@ const { v4: uuidv4 } = require("uuid");
 const multer = require('multer');
 const fs = require('fs')
 const { MongoClient, ServerApiVersion } = require("mongodb");
-const { type } = require("os");
-const { removeRequestMeta } = require("next/dist/server/request-meta");
 // const uri = "mongodb+srv://uditjain:u1d2i3t4@lms-cluster.s5q8x.mongodb.net/?retryWrites=true&w=majority&appName=LMS-Cluster/ApplicationDB";
 const uri =
   "mongodb+srv://uditjain:u1d2i3t4@lms-cluster.s5q8x.mongodb.net/ApplicationDB";
