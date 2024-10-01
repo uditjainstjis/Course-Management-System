@@ -42,46 +42,46 @@ function AdminLogin() {
     }
   }
 
-  // return (
-  //   <>{AdminAuthenticated ?  (    <>
-  //     <AdminAccess/>
-  //     </>): 
-  //     (
-  //       <div className='box'>
-  //       <div className="container">
-  //         <h1>Admin Login</h1>
-  //         <div className="input-group">
-  //           <label htmlFor="username">Username</label>
-  //           <input
-  //             type="text"
-  //             className="username"
-  //             name="username"
-  //             id="inputuser"
-  //             required
-  //           />
-  //         </div>
-  //         <div className="input-group">
-  //           <label htmlFor="password">Password</label>
-  //           <input
-  //             type="password"
-  //             className="password"
-  //             name="password"
-  //             id="inputpass"
-  //             required
-  //           />
-  //         </div>
-  //         <button type="submit" className="btn" onClick={handleclick}>
-  //           Login
-  //         </button>
-  //       </div>
-  //       </div>)
-  //   }
+  return (
+    <>{AdminAuthenticated ?  (    <>
+      <AdminAccess/>
+      </>): 
+      (
+        <div className='box'>
+        <div className="container">
+          <h1>Admin Login</h1>
+          <div className="input-group">
+            <label htmlFor="username">Username</label>
+            <input
+              type="text"
+              className="username"
+              name="username"
+              id="inputuser"
+              required
+            />
+          </div>
+          <div className="input-group">
+            <label htmlFor="password">Password</label>
+            <input
+              type="password"
+              className="password"
+              name="password"
+              id="inputpass"
+              required
+            />
+          </div>
+          <button type="submit" className="btn" onClick={handleclick}>
+            Login
+          </button>
+        </div>
+        </div>)
+    }
     
-  //   </>
-  // );
-  return(
-    <AdminAccess/>
-  )
+    </>
+  );
+  // return(
+  //   <AdminAccess/>
+  // )
 }
 
 export default AdminLogin;
