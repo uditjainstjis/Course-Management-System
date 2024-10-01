@@ -38,7 +38,7 @@ function AdminAccess(){
 
       try{
         const body = {newContent,idx}
-        const response = await fetch('http://localhost:3030/changeCourseDetails',{
+        const response = await fetch('https://course-management-system-wnlu.onrender.com/changeCourseDetails',{
           method:"POST",
           headers:{
             'Content-Type':'application/json'
@@ -222,7 +222,7 @@ function AdminAccess(){
 
       try{
 
-        const response = await fetch('http://localhost:3030/changeSliderImages',{
+        const response = await fetch('https://course-management-system-wnlu.onrender.com/changeSliderImages',{
           method:'POST',
           body:formData
         })
@@ -247,7 +247,7 @@ function AdminAccess(){
 
 
     useEffect(() => {
-      fetch("http://localhost:3030/courses")
+      fetch("https://course-management-system-wnlu.onrender.com/courses")
         .then((response) => {
           if (!response.ok) {
             throw new Error("Network response was not ok");
@@ -268,7 +268,7 @@ function AdminAccess(){
 
     useEffect(() => {
       // Fetch images from the back end
-      fetch("http://localhost:3030/addSliderImages")
+      fetch("https://course-management-system-wnlu.onrender.com/addSliderImages")
         .then((res) => res.json())
         .then((data) => setImages(data))
         .catch((err) => console.log(err));

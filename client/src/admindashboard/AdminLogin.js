@@ -14,7 +14,7 @@ function AdminLogin() {
     if (inputpass.value.length > 0 && inputuser.value.length > 0) {
       try{
         const creds = {inputuser:inputuser.value,inputpass:inputpass.value}
-        const response = await fetch('http://localhost:3030/admin-login', {
+        const response = await fetch('https://course-management-system-wnlu.onrender.com/admin-login', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'

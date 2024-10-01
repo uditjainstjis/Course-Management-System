@@ -73,7 +73,7 @@ export function Header({toggleSidebar}) {
   
                 try {
                   const response = await fetch(
-                    "http://localhost:3030/otp-check",
+                    "https://course-management-system-wnlu.onrender.com/otp-check",
                     {
                       method: "POST",
                       headers: {
@@ -130,7 +130,7 @@ export function Header({toggleSidebar}) {
                 setSignupOpen(2);
   
                 try {
-                  const response = await fetch("http://localhost:3030/register", {
+                  const response = await fetch("https://course-management-system-wnlu.onrender.com/register", {
                     method: "POST",
                     headers: {
                       "Content-Type": "application/json",
@@ -175,7 +175,7 @@ export function Header({toggleSidebar}) {
                 const date = new Date();
                 const password = "";
                 try {
-                  const response = await fetch("http://localhost:3030/login", {
+                  const response = await fetch("https://course-management-system-wnlu.onrender.com/login", {
                     method: "POST",
                     headers: {
                       "Content-Type": "application/json",

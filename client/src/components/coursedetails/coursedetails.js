@@ -12,7 +12,7 @@ export function CourseDetails(){
 
     useEffect(() => {
   
-      fetch("http://localhost:3030/courses").then((response) => {
+      fetch("https://course-management-system-wnlu.onrender.com/courses").then((response) => {
           if (!response.ok) {
             throw new Error("Network response was not ok");
           }

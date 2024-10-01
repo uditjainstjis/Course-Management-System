@@ -9,7 +9,7 @@ export function Home() {
   const [images, setImages] = useState([]);
   useEffect(() => {
     // Fetch images from the back end
-    fetch("http://localhost:3030/addSliderImages")
+    fetch("https://course-management-system-wnlu.onrender.com/addSliderImages")
       .then((res) => res.json())
       .then((data) => setImages(data))
       .catch((err) => console.log(err));
