@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { ServerAddr } from "../../apilinks";
 import React from "react";
 import "./Courses.css";
 import { SingleCourse } from "../coursecards/coursecard2";
@@ -20,7 +21,7 @@ function Courses() {
       //     }
       //     )
       //     .catch(error=>console.log(error))
-      fetch("https://course-management-system-wnlu.onrender.com/courses")
+      fetch(`${ServerAddr}/courses`)
         .then((response) => {
           if (!response.ok) {
             throw new Error("Network response was not ok");

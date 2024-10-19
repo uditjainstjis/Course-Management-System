@@ -1,5 +1,6 @@
 import "./Home.css";
 // import { slide1, slide2, slide3 } from "./Web-Media";
+import { ServerAddr } from "../../apilinks";
 import usp from "../../usp.png";
 import Courses from "../courses/courses";
 import { useEffect, useState } from "react";
@@ -10,7 +11,7 @@ export function Home() {
   const [imagesloaded,setImagesloading] = useState(0);
   useEffect(() => {
     // Fetch images from the back end
-    fetch("https://course-management-system-wnlu.onrender.com/addSliderImages")
+    fetch(`${ServerAddr}/addSliderImages`)
       .then((res) => res.json())
       .then((data) => setImages(data),setImagesloading(true))
       .catch((err) => console.log(err));

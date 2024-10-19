@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import { ServerAddr } from '../apilinks';
 import "./AdminLogin.css";
 import AdminAccess from './AdminAccess'
 
@@ -14,7 +14,7 @@ function AdminLogin() {
     if (inputpass.value.length > 0 && inputuser.value.length > 0) {
       try{
         const creds = {inputuser:inputuser.value,inputpass:inputpass.value}
-        const response = await fetch('https://course-management-system-wnlu.onrender.com/admin-login', {
+        const response = await fetch(`${ServerAddr}/admin-login`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'

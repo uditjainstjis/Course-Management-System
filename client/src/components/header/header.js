@@ -3,6 +3,7 @@ import logo from "../../logo.svg";
 import { Sidebar } from '../sidebar/sidebar';
 import bar from "../../three-line-bar.png";
 import './header.css'
+import { ServerAddr } from '../../apilinks';
 
 export function Header({toggleSidebar}) {
     const [isSignupOpen, setSignupOpen] = useState(0);
@@ -73,7 +74,7 @@ export function Header({toggleSidebar}) {
   
                 try {
                   const response = await fetch(
-                    "https://course-management-system-wnlu.onrender.com/otp-check",
+                    `${ServerAddr}/otp-check`,
                     {
                       method: "POST",
                       headers: {
@@ -130,7 +131,7 @@ export function Header({toggleSidebar}) {
                 setSignupOpen(2);
   
                 try {
-                  const response = await fetch("https://course-management-system-wnlu.onrender.com/register", {
+                  const response = await fetch(`${ServerAddr}/register`, {
                     method: "POST",
                     headers: {
                       "Content-Type": "application/json",
@@ -175,7 +176,7 @@ export function Header({toggleSidebar}) {
                 const date = new Date();
                 const password = "";
                 try {
-                  const response = await fetch("https://course-management-system-wnlu.onrender.com/login", {
+                  const response = await fetch(`${ServerAddr}/login`, {
                     method: "POST",
                     headers: {
                       "Content-Type": "application/json",

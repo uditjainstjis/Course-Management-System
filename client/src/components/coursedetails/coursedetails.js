@@ -1,6 +1,6 @@
 import React , {useState,useEffect} from 'react'
 import { useParams } from 'react-router-dom';
-
+import { ServerAddr } from '../../apilinks';
 import { SingleCourse } from '../coursecards/coursecard1';
 
 export function CourseDetails(){
@@ -12,7 +12,7 @@ export function CourseDetails(){
 
     useEffect(() => {
   
-      fetch("https://course-management-system-wnlu.onrender.com/courses").then((response) => {
+      fetch(`${ServerAddr}/courses`).then((response) => {
           if (!response.ok) {
             throw new Error("Network response was not ok");
           }

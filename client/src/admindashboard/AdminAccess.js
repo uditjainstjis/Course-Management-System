@@ -1,4 +1,5 @@
 import React, { useState ,useEffect} from 'react';
+import { ServerAddr } from '../apilinks';
 import './AdminAccess.css'
 
 function AdminAccess(){
@@ -38,7 +39,7 @@ function AdminAccess(){
 
       try{
         const body = {newContent,idx}
-        const response = await fetch('https://course-management-system-wnlu.onrender.com/changeCourseDetails',{
+        const response = await fetch(`${ServerAddr}/changeCourseDetails`,{
           method:"POST",
           headers:{
             'Content-Type':'application/json'
@@ -222,7 +223,7 @@ function AdminAccess(){
 
       try{
 
-        const response = await fetch('https://course-management-system-wnlu.onrender.com/changeSliderImages',{
+        const response = await fetch(`${ServerAddr}/changeSliderImages`,{
           method:'POST',
           body:formData
         })
@@ -247,7 +248,7 @@ function AdminAccess(){
 
 
     useEffect(() => {
-      fetch("https://course-management-system-wnlu.onrender.com/courses")
+      fetch(`${ServerAddr}/courses`)
         .then((response) => {
           if (!response.ok) {
             throw new Error("Network response was not ok");
@@ -268,7 +269,7 @@ function AdminAccess(){
 
     useEffect(() => {
       // Fetch images from the back end
-      fetch("https://course-management-system-wnlu.onrender.com/addSliderImages")
+      fetch(`${ServerAddr}/addSliderImages`)
         .then((res) => res.json())
         .then((data) => setImages(data))
         .catch((err) => console.log(err));
