@@ -9,7 +9,7 @@ const { v4: uuidv4 } = require("uuid");
 const multer = require('multer');
 const fs = require('fs')
 const { MongoClient, ServerApiVersion } = require("mongodb");
-import {ServerAddr} from '../client/src/apilinks.js'
+const { ServerAddr } = require('../client/src/apilinks.js');
 // const uri = "mongodb+srv://uditjain:u1d2i3t4@lms-cluster.s5q8x.mongodb.net/?retryWrites=true&w=majority&appName=LMS-Cluster/ApplicationDB";
 const uri =
   "mongodb+srv://uditjain:u1d2i3t4@lms-cluster.s5q8x.mongodb.net/ApplicationDB";
