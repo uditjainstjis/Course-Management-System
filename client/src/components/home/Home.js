@@ -27,7 +27,7 @@ export function Home() {
           src={image.imageUrl}
           key={idx}
           alt={`Slide ${image.id}`}
-          style={{ width: "100%", borderRadius: "20px" }}
+          style={{ borderRadius: "20px" }}
         />
       ))}
       {/* <img src={slide1} style={{width:"100%"}}></img>

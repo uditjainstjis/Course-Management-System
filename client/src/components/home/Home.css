@@ -2,15 +2,14 @@
   margin:0%
 } */
 
-
 .slideshow{
     position: relative;
     margin-left: 50%;
     transform: translateX(-50%);
     margin-top: 110px;
     /* width: 66.2%; */
-    width: 86%;
-    height: 70%;
+    width: 71vw;
+    height: 75%;
     overflow: hidden;
     
     /* border-radius: 20px; */

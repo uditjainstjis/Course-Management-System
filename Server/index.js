@@ -9,6 +9,7 @@ const { v4: uuidv4 } = require("uuid");
 const multer = require('multer');
 const fs = require('fs')
 const { MongoClient, ServerApiVersion } = require("mongodb");
+import {ServerAddr} from '../client/src/apilinks.js'
 // const uri = "mongodb+srv://uditjain:u1d2i3t4@lms-cluster.s5q8x.mongodb.net/?retryWrites=true&w=majority&appName=LMS-Cluster/ApplicationDB";
 const uri =
   "mongodb+srv://uditjain:u1d2i3t4@lms-cluster.s5q8x.mongodb.net/ApplicationDB";
@@ -184,7 +185,7 @@ app.post("/changeSliderImages",upload.single("image") ,async (req,res) =>{
   const fileName = req.file.filename
   const result = await Image.updateOne(
     {id:req.body.idx},
-    {imageUrl:`http://localhost:3030/Web-Files/${fileName}`}
+    {imageUrl:`${ServerAddr}/${fileName}`}
   );
 
   if (result.nModified === 0) {
