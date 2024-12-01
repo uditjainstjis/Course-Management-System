@@ -185,7 +185,7 @@ app.post("/changeSliderImages",upload.single("image") ,async (req,res) =>{
   const fileName = req.file.filename
   const result = await Image.updateOne(
     {id:req.body.idx},
-    {imageUrl:`${ServerAddr}/${fileName}`}
+    {imageUrl:`${ServerAddr}/Web-Files/${fileName}`}
   );
 
   if (result.nModified === 0) {
